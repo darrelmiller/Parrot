@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{332ABA
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parrot.Ninject", "Parrot.Ninject\Parrot.Ninject.csproj", "{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,16 @@ Global
 		{90502FC0-81A5-46E3-B8C4-DFACC0F2D4EE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{90502FC0-81A5-46E3-B8C4-DFACC0F2D4EE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{90502FC0-81A5-46E3-B8C4-DFACC0F2D4EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9508EE90-8F49-40D4-BBAB-2676AFB7AB8F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
