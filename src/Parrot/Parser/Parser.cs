@@ -246,7 +246,28 @@ namespace Parrot.Parser
 
                 case ProductionIndex.Outputstatement_Colon_Identifier:
                     // <OutputStatement> ::= ':' Identifier
-                    return new RawOutput(r[1].Data as string);
+                    //check for a special identifier
+                    //:password, :radio, :reset, :selected, :submit, :text, :checkbox
+                    string text = r[1].Data as string;
+                    switch (text)
+                    {
+                        case "password":
+                            return new Statement("input", new StatementTail {Attributes = new AttributeList(new Attribute("type", "password"))});
+                        case "radio":
+                            return new Statement("input", new StatementTail { Attributes = new AttributeList(new Attribute("type", "radio")) });
+                        case "reset":
+                            return new Statement("input", new StatementTail { Attributes = new AttributeList(new Attribute("type", "reset")) });
+                        case "selected":
+                            return new Statement("input", new StatementTail { Attributes = new AttributeList(new Attribute("type", "selected")) });
+                        case "submit":
+                            return new Statement("input", new StatementTail { Attributes = new AttributeList(new Attribute("type", "submit")) });
+                        case "text":
+                            return new Statement("input", new StatementTail { Attributes = new AttributeList(new Attribute("type", "text")) });
+                        case "checkbox":
+                            return new Statement("input", new StatementTail { Attributes = new AttributeList(new Attribute("type", "checkbox")) });
+                        default:
+                            return new RawOutput(r[1].Data as string);
+                    }
 
                 case ProductionIndex.Outputstatement_Eq_Identifier:
                     // <OutputStatement> ::= '=' Identifier

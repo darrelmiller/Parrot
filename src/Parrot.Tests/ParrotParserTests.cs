@@ -49,6 +49,21 @@ namespace Parrot.Tests
             Assert.AreEqual(element, document.Children[0].Name);
         }
 
+        [TestCase(":password", "input", "password")]
+        [TestCase(":radio", "input", "radio")]
+        [TestCase(":reset", "input", "reset")]
+        [TestCase(":selected", "input", "selected")]
+        [TestCase(":submit", "input", "submit")]
+        [TestCase(":text", "input", "text")]
+        [TestCase(":checkbox", "input", "checkbox")]
+        public void CssSelector(string key, string element, string type)
+        {
+            var document = Parse(key);
+            Assert.IsNotNull(document);
+            Assert.AreEqual(element, document.Children[0].Name);
+            Assert.AreEqual(type, document.Children[0].Attributes[0].Value);
+        }
+
         [TestCase("div1", "div2")]
         public void ElementFollowedByWhitespaceAndAnotherElementProduceTwoBlockElements(string element1, string element2)
         {
